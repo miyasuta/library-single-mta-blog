@@ -15,11 +15,5 @@ export default {
 			useFakeTimers: false
 		}
 	},
-	tests: {
-		// test file for the Example control
-		Example: {
-			title: "QUnit Test for Example",
-			_alternativeTitle: "QUnit tests: miyasuta.library.Example"
-		}
-	}
+	tests: {}
 };
