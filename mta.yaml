@@ -32,12 +32,45 @@ modules:
         existing_destinations_policy: ignore
   build-parameters:
     no-source: true
+- name: library-single-mta-blog-app-content
+  type: com.sap.application.content
+  path: .
+  requires:
+  - name: library-single-mta-blog_html_repo_host
+    parameters:
+      content-target: true
+  build-parameters:
+    build-result: resources
+    requires:
+    - artifacts:
+      - miyasutaconsumerapp.zip
+      name: miyasutaconsumerapp
+      target-path: resources/
+- name: miyasutaconsumerapp
+  type: html5
+  path: consumerapp
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
 resources:
 - name: library-single-mta-blog-destination-service
   type: org.cloudfoundry.managed-service
   parameters:
     config:
       HTML5Runtime_enabled: true
+      init_data:
+        instance:
+          destinations:
+          - Authentication: NoAuthentication
+            Name: ui5
+            ProxyType: Internet
+            Type: HTTP
+            URL: https://ui5.sap.com
+          existing_destinations_policy: update
       version: 1.0.0
     service: destination
     service-name: library-single-mta-blog-destination-service
@@ -55,3 +88,6 @@ resources:
     service: xsuaa
     service-name: library-single-mta-blog-xsuaa-service
     service-plan: application
+parameters:
+  deploy_mode: html5-repo
+  enable-parallel-deployments: true
