@@ -1,3 +1,57 @@
 _schema-version: "3.2"
 ID: library-single-mta-blog
 version: 0.0.1
+modules:
+- name: library-single-mta-blog-destination-content
+  type: com.sap.application.content
+  requires:
+  - name: library-single-mta-blog-destination-service
+    parameters:
+      content-target: true
+  - name: library-single-mta-blog_html_repo_host
+    parameters:
+      service-key:
+        name: library-single-mta-blog_html_repo_host-key
+  - name: uaa_library-single-mta-blog
+    parameters:
+      service-key:
+        name: uaa_library-single-mta-blog-key
+  parameters:
+    content:
+      instance:
+        destinations:
+        - Name: library_single_mta_library_single_mta_blog_html_repo_host
+          ServiceInstanceName: library-single-mta-blog-html5-app-host-service
+          ServiceKeyName: library-single-mta-blog_html_repo_host-key
+          sap.cloud.service: library.single.mta
+        - Authentication: OAuth2UserTokenExchange
+          Name: library_single_mta_uaa_library_single_mta_blog
+          ServiceInstanceName: library-single-mta-blog-xsuaa-service
+          ServiceKeyName: uaa_library-single-mta-blog-key
+          sap.cloud.service: library.single.mta
+        existing_destinations_policy: ignore
+  build-parameters:
+    no-source: true
+resources:
+- name: library-single-mta-blog-destination-service
+  type: org.cloudfoundry.managed-service
+  parameters:
+    config:
+      HTML5Runtime_enabled: true
+      version: 1.0.0
+    service: destination
+    service-name: library-single-mta-blog-destination-service
+    service-plan: lite
+- name: library-single-mta-blog_html_repo_host
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: html5-apps-repo
+    service-name: library-single-mta-blog-html5-app-host-service
+    service-plan: app-host
+- name: uaa_library-single-mta-blog
+  type: org.cloudfoundry.managed-service
+  parameters:
+    path: ./xs-security.json
+    service: xsuaa
+    service-name: library-single-mta-blog-xsuaa-service
+    service-plan: application
