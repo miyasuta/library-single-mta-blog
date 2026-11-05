@@ -20,6 +20,7 @@
 		"build": "ui5 build --clean-dest",
 		"build:ts-interfaces": "npx @ui5/ts-interface-generator",
 		"start": "ui5 serve -o test-resources/miyasuta/library/Example.html",
+		"remove-example": "node remove-example.mjs",
 		"start-coverage": "ui5 serve --port 8080 --config ui5-coverage.yaml",
 		"start:dist": "npm start -- --config ui5-dist.yaml",
 		"testsuite": "ui5 serve -o test-resources/miyasuta/library/qunit/testsuite.qunit.html",
