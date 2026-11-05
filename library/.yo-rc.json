@@ -1,6 +1,6 @@
 {
   "generator-ui5-ts-library": {
-    "namespace": "miyasuta",
+    "namespace": "miyasuta.library",
     "framework": "SAPUI5",
     "frameworkVersion": "1.154.0",
     "flat": true,
@@ -10,10 +10,10 @@
     "tstypesVersion": "1.154.0",
     "metadataOptionsImportLine": "import type { MetadataOptions } from \"sap/ui/core/Element\";\n",
     "metadataOptionsType": "MetadataOptions",
-    "libId": "miyasuta",
-    "libURI": "miyasuta",
+    "libId": "miyasuta.library",
+    "libURI": "miyasuta/library",
     "libURIFlat": "",
-    "libBasePath": "..",
+    "libBasePath": "../..",
     "cdnDomain": "ui5.sap.com",
     "defaultTheme": "sap_horizon",
     "availableThemes": {

@@ -7,7 +7,7 @@ import ExampleRenderer from "./ExampleRenderer";
 import { ExampleColor } from "./library";
 
 /**
- * Constructor for a new <code>miyasuta.Example</code> control.
+ * Constructor for a new <code>miyasuta.library.Example</code> control.
  *
  * Some class description goes here.
  * @extends Control
@@ -17,7 +17,7 @@ import { ExampleColor } from "./library";
  *
  * @constructor
  * @public
- * @name miyasuta.Example
+ * @name miyasuta.library.Example
  */
 export default class Example extends Control {
 	// The following three lines were generated and should remain as-is to make TypeScript aware of the constructor signatures
@@ -28,7 +28,7 @@ export default class Example extends Control {
 	}
 
 	static readonly metadata: MetadataOptions = {
-		library: "miyasuta",
+		library: "miyasuta.library",
 		properties: {
 			/**
 			 * The text to display.
@@ -42,7 +42,7 @@ export default class Example extends Control {
 			 * The color to use (default to "Default" color).
 			 */
 			color: {
-				type: "miyasuta.ExampleColor",
+				type: "miyasuta.library.ExampleColor",
 				group: "Appearance",
 				defaultValue: ExampleColor.Default
 			}

@@ -1,12 +1,12 @@
 specVersion: "4.0"
 metadata:
-  name: miyasuta
+  name: miyasuta.library
 type: library
 resources:
   configuration:
     paths:
-      src: dist/resources/miyasuta/
-      test: dist/test-resources/miyasuta/
+      src: dist/resources/miyasuta/library/
+      test: dist/test-resources/miyasuta/library/
 framework:
   name: SAPUI5
   version: 1.154.0

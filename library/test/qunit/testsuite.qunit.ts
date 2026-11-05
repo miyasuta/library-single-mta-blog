@@ -1,8 +1,8 @@
 export default {
-	name: "QUnit TestSuite for miyasuta",
+	name: "QUnit TestSuite for miyasuta.library",
 	defaults: {
 		ui5: {
-			libs: ["sap.ui.core", "miyasuta"],
+			libs: ["sap.ui.core", "miyasuta.library"],
 			theme: "sap_horizon"
 		},
 		qunit: {
@@ -19,7 +19,7 @@ export default {
 		// test file for the Example control
 		Example: {
 			title: "QUnit Test for Example",
-			_alternativeTitle: "QUnit tests: miyasuta.Example"
+			_alternativeTitle: "QUnit tests: miyasuta.library.Example"
 		}
 	}
 };

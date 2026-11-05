@@ -1,4 +1,4 @@
-# UI5 Library miyasuta
+# UI5 Library miyasuta.library
 
 Insert the purpose of this project and some interesting info here...
 

@@ -9,20 +9,20 @@ import Lib from "sap/ui/core/Lib";
 import "sap/ui/core/library";
 
 /**
- * Initialization Code and shared classes of library miyasuta.
+ * Initialization Code and shared classes of library miyasuta.library.
  */
 
 // delegate further initialization of this library to the Core
 const thisLib: { [key: string]: unknown } = Lib.init({
-	name: "miyasuta",
+	name: "miyasuta.library",
 	version: "${version}",
 	dependencies: [
 		// keep in sync with the ui5.yaml and .library files
 		"sap.ui.core"
 	],
-	types: ["miyasuta.ExampleColor"],
+	types: ["miyasuta.library.ExampleColor"],
 	interfaces: [],
-	controls: ["miyasuta.Example"],
+	controls: ["miyasuta.library.Example"],
 	elements: [],
 	noLibraryCSS: false // if no CSS is provided, you can disable the library.css load here
 }) as { [key: string]: unknown };

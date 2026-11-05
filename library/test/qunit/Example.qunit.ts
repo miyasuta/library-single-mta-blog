@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
-import { ExampleColor } from "miyasuta/library";
-import Example from "miyasuta/Example";
+import { ExampleColor } from "miyasuta/library/library";
+import Example from "miyasuta/library/Example";
 
 // prepare DOM
 const elem = document.createElement("div");

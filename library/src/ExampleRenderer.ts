@@ -21,7 +21,7 @@ export default {
 	 * @param control The control instance to be rendered
 	 */
 	render: function (rm: RenderManager, control: Example) {
-		const i18n = Lib.getResourceBundleFor("miyasuta");
+		const i18n = Lib.getResourceBundleFor("miyasuta.library");
 
 		rm.openStart("div", control);
 		if (control.getColor() === ExampleColor.Highlight) {

@@ -1,5 +1,5 @@
-import { ExampleColor } from "miyasuta/library";
-import Example from "miyasuta/Example";
+import { ExampleColor } from "miyasuta/library/library";
+import Example from "miyasuta/library/Example";
 
 // create a new instance of the Example control and
 // place it into the DOM element with the id "content"
