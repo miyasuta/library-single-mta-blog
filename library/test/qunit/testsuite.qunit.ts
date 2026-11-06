@@ -2,7 +2,7 @@ export default {
 	name: "QUnit TestSuite for miyasuta.library",
 	defaults: {
 		ui5: {
-			libs: ["sap.ui.core", "miyasuta.library"],
+			libs: ["sap.ui.core", "sap.m", "sap.ui.layout", "miyasuta.library"],
 			theme: "sap_horizon"
 		},
 		qunit: {
@@ -15,5 +15,9 @@ export default {
 			useFakeTimers: false
 		}
 	},
-	tests: {}
+	tests: {
+		"controller/MyDialogHandler": {
+			title: "QUnit Test for MyDialogHandler"
+		}
+	}
 };
