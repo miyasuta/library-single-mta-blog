@@ -7,6 +7,8 @@ import Lib from "sap/ui/core/Lib";
 
 // library dependencies must also be imported here
 import "sap/ui/core/library";
+import "sap/m/library";
+import "sap/ui/layout/library";
 
 /**
  * Initialization Code and shared classes of library miyasuta.library.
@@ -18,7 +20,9 @@ const thisLib: { [key: string]: unknown } = Lib.init({
 	version: "${version}",
 	dependencies: [
 		// keep in sync with the ui5.yaml and .library files
-		"sap.ui.core"
+		"sap.ui.core",
+		"sap.m",
+		"sap.ui.layout"
 	],
 	types: [],
 	interfaces: [],
