@@ -1,6 +1,7 @@
 <mvc:View controllerName="miyasuta.consumerapp.controller.View1"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
+    <Page id="idPage" title="{i18n>title}">
+        <Button id="idPressMeButton" text="Press Me" press="onPressMeButtonPress" />
     </Page>
 </mvc:View>
